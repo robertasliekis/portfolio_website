@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:400,700&display=swap");
+
+//Global values start
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Comfortaa;
+  --global-color: white;
+}
+
+//Global values end
+
+.wrapper {
+  position: relative;
+}
+
+.background-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(137, 176, 212);
+  overflow: hidden;
+}
+
+.background-line1 {
+  position: absolute;
+  transform-origin: center right;
+  left: -20.2%;
+  top: -50%;
+  background-color: rgba($color: #ffffff, $alpha: 0.2);
+  height: 200%;
+  width: 35%;
+  transform: rotate(-45deg);
+  border-right: 2px solid rgba($color: #ffffff, $alpha: 0.5);
+}
+
+.background-line2 {
+  position: absolute;
+  transform-origin: center right;
+  left: 25%;
+  top: -50%;
+  background-color: rgba($color: #ffffff, $alpha: 0.1);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  height: 200%;
+  width: 25%;
+  transform: rotate(-45deg);
+  border-right: 2px solid rgba($color: #ffffff, $alpha: 0.5);
+}
+
+.background-line3 {
+  position: absolute;
+  transform-origin: center right;
+  left: 46%;
+  top: -75%;
+  background-color: rgba($color: #ffffff, $alpha: 0.1);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  height: 200%;
+  width: 25%;
+  transform: rotate(-45deg);
+  border-right: 2px solid rgba($color: #ffffff, $alpha: 0.5);
+}
+
+.info-container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+.info-container .name {
+  color: var(--global-color);
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.info-container .titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  color: var(--global-color);
+}
+
+.info-container .titles .dot {
+  background-color: var(--global-color);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 1rem;
+}
+
+.info-container .titles .title {
+  margin: 0 0.3rem;
+}
+
+.info-container .social-media-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.info-container .social-media-icons .circle {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  transition: 0.3s all ease;
+}
+
+.info-container .social-media-icons .circle .icon {
+  color: var(--global-color);
+  font-size: 2.5rem;
+}
+
+.info-container .social-media-icons .circle:hover {
+  background-color: rgba($color: #ffffff, $alpha: 0.1);
+  transform: scale(1.15);
+}

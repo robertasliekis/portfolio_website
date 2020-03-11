@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:400,700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --global-color-text: rgb(49, 49, 49);
+  --global-color-background: black;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Comfortaa;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.background-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  left: 50%;
+  bottom: 0;
+  height: 60vh;
+  width: 120rem;
+}
+
+.lines-container {
+  position: absolute;
+  height: 150vw;
+  width: 150vw;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+  top: 50%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.background-container .lines-container .background-line {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  height: 100%;
+  width: 15%;
+}
+
+.background-container .lines-container .background-line1 {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.background-container .lines-container .background-line2 {
+  background-color: rgba(0, 0, 0, 0.1);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.1)));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.background-container .lines-container .background-line3 {
+  background-color: rgba(0, 0, 0, 0.1);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.05)));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.05) 100%);
+}
+
+.background-container .lines-container .background-line1,
+.background-container .lines-container .background-line4 {
+  width: 35%;
+}
+
+.info-container {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.info-container .name {
+  color: var(--global-color-text);
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.info-container .titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  color: var(--global-color-text);
+}
+
+.info-container .titles .dot {
+  background-color: var(--global-color-text);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 1rem;
+}
+
+.info-container .titles .title {
+  margin: 0 0.3rem;
+}
+
+.info-container .social-media-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.info-container .social-media-icons .circle {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid var(--global-color-text);
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.info-container .social-media-icons .circle .icon {
+  color: var(--global-color-text);
+  font-size: 2.5rem;
+}
+
+.info-container .social-media-icons .circle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+@media only screen and (max-width: 1200px) {
+  .lines-container {
+    position: absolute;
+    width: 112rem;
+    height: 100rem;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .info-container .name {
+    font-size: 3rem;
+  }
+  .info-container .titles {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+  .info-container .social-media-icons .circle {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 2rem;
+  }
+  .info-container .social-media-icons .circle .icon {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .info-container .name {
+    font-size: 2rem;
+  }
+  .info-container .titles {
+    font-size: 0.9rem;
+  }
+  .info-container .titles .title {
+    margin: 0 0.2rem;
+  }
+  .info-container .titles .dot {
+    width: 0.4rem;
+    height: 0.4rem;
+  }
+  .info-container .social-media-icons .circle {
+    height: 3rem;
+    width: 3rem;
+    margin: 0 0.2rem;
+  }
+  .info-container .social-media-icons .circle .icon {
+    font-size: 1.5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
