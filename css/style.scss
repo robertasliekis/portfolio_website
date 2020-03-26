@@ -14,6 +14,7 @@
 
 html,
 body {
+  overflow: hidden;
   padding: 0;
   margin: 0;
   font-family: Comfortaa;
@@ -27,20 +28,13 @@ body {
 
 //background start
 .background-container {
-  position: relative;
   height: 100vh;
   width: 100%;
   background-color: rgb(255, 255, 255);
-  overflow: hidden;
-}
-
-.background-image {
-  position: absolute;
-  transform: translate(-50%, 0);
-  left: 50%;
-  bottom: 0;
-  height: 60vh;
-  width: 120rem;
+  background-image: url(/images/forest.webp);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 2200px 600px;
 }
 
 .lines-container {
@@ -103,6 +97,8 @@ body {
 
 .info-container .name {
   color: var(--global-color-text);
+  color: red;
+  color: gray;
   font-size: 4rem;
   font-weight: bold;
   text-align: center;
@@ -190,6 +186,10 @@ body {
 }
 
 @media only screen and (max-width: 420px) {
+  .background-container {
+    background-size: 1100px 400px;
+  }
+
   .info-container .name {
     font-size: 2rem;
   }
